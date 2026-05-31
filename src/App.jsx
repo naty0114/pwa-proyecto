@@ -1,122 +1,227 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// Importar todos los componentes creados
+import Perfil from "./components/Perfil";
+import Clima from "./components/Clima";
+import Pedido from "./components/Pedido";
+import MensajeBienvenida from "./components/MensajeBienvenida";
+import ListaHabilidades from "./components/ListaHabilidades";
+import ListaProductos from "./components/ListaProductos";
+import ListaTareas from "./components/ListaTareas";
+import Tarjeta from "./components/Tarjeta";
+import Dashboard from "./components/Dashboard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+      padding: "20px",
+      fontFamily: "Arial, sans-serif",
+      backgroundColor: "#fafafa",
+      minHeight: "100vh"
+    }}>
+      
+      {/* Título principal */}
+      <h1 style={{
+        textAlign: "center",
+        color: "#2196f3",
+        borderBottom: "3px solid #2196f3",
+        paddingBottom: "10px",
+        marginBottom: "30px"
+      }}>
+        📚 Laboratorio 2 - Fundamentos de React
+      </h1>
+      
+      {/* Contenedor con grid para organizar mejor */}
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
+        gap: "20px"
+      }}>
+        
+        {/* Ejercicio 1 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#2196f3",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 1: Perfil
+          </div>
+          <div style={{ padding: "15px" }}>
+            <Perfil />
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+        
+        {/* Ejercicio 2 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#ff9800",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 2: Clima
+          </div>
+          <div style={{ padding: "15px" }}>
+            <Clima />
+          </div>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        
+        {/* Ejercicio 3 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#4caf50",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 3: Pedido
+          </div>
+          <div style={{ padding: "15px" }}>
+            <Pedido />
+          </div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+        
+        {/* Ejercicio 4 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#9c27b0",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 4: Mensaje de Bienvenida
+          </div>
+          <div style={{ padding: "15px" }}>
+            <MensajeBienvenida />
+          </div>
         </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        
+        {/* Ejercicio 5 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#f44336",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 5: Lista de Habilidades
+          </div>
+          <div style={{ padding: "15px" }}>
+            <ListaHabilidades />
+          </div>
+        </div>
+        
+        {/* Ejercicio 6 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#00bcd4",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 6: Lista de Productos
+          </div>
+          <div style={{ padding: "15px" }}>
+            <ListaProductos />
+          </div>
+        </div>
+        
+        {/* Ejercicio 7 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#8bc34a",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 7: Lista de Tareas
+          </div>
+          <div style={{ padding: "15px" }}>
+            <ListaTareas />
+          </div>
+        </div>
+        
+        {/* Ejercicio 8 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{
+            backgroundColor: "#e91e63",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 8: Tarjeta
+          </div>
+          <div style={{ padding: "15px" }}>
+            <Tarjeta />
+          </div>
+        </div>
+        
+        {/* Ejercicio 9 */}
+        <div style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+          gridColumn: "span 2"
+        }}>
+          <div style={{
+            backgroundColor: "#3f51b5",
+            color: "white",
+            padding: "10px 15px",
+            fontWeight: "bold"
+          }}>
+            📌 Ejercicio 9: Dashboard
+          </div>
+          <div style={{ padding: "15px" }}>
+            <Dashboard />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
