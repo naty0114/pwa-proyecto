@@ -2,8 +2,7 @@ function MensajeBienvenida() {
 
   const usuario = { nombre: "Carlos", rol: "admin" };
   
-  // EARLY RETURN: Si usuario es null, retornar anticipadamente
-  if (usuario === null) {
+  
     return (
       <div style={{ border: "1px solid #ff9800", padding: "20px", margin: "10px", borderRadius: "8px", backgroundColor: "#fff3e0" }}>
         <h2>🔐 Mensaje de Bienvenida</h2>

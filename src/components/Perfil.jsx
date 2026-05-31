@@ -1,5 +1,5 @@
 function Perfil() {
-  // Definir las variables internas
+  
   const nombre = "Ana García";
   const profesion = "Desarrolladora Frontend";
   const experiencia = 5;

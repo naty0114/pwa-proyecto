@@ -1,5 +1,5 @@
 function Tarjeta() {
-  // Datos internos del componente
+  
   const datos = {
     titulo: "React Avanzado",
     descripcion: "Aprende a construir aplicaciones web modernas con React, hooks, context API y más. Este curso incluye proyectos prácticos y ejercicios reales.",
@@ -19,7 +19,7 @@ function Tarjeta() {
       fontFamily: "Arial, sans-serif"
     }}>
       
-      {/* Título */}
+      
       <h3 style={{
         margin: "0 0 10px 0",
         color: "#333",
@@ -38,7 +38,7 @@ function Tarjeta() {
         {datos.descripcion}
       </p>
       
-      {/* Lista de etiquetas (badges) */}
+      
       <div style={{
         display: "flex",
         flexWrap: "wrap",
@@ -62,7 +62,7 @@ function Tarjeta() {
         ))}
       </div>
       
-      {/* Badge de destacado (solo si destacado es true) */}
+      
       {datos.destacado && (
         <div style={{
           backgroundColor: "#2196f3",
@@ -73,7 +73,7 @@ function Tarjeta() {
           fontSize: "12px",
           fontWeight: "bold"
         }}>
-          ⭐ CURSO DESTACADO
+           CURSO DESTACADO
         </div>
       )}
     </div>

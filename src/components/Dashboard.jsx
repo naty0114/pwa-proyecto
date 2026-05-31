@@ -1,12 +1,12 @@
 function Dashboard() {
-  // Datos del usuario
+ 
   const usuario = {
     nombre: "Ana García",
     email: "ana.garcia@example.com",
     rol: "Desarrolladora Frontend"
   };
 
-  // Array de notificaciones
+ 
   const notificaciones = [
     { id: 1, mensaje: "Tu proyecto fue aprobado", leida: false },
     { id: 2, mensaje: "Nuevo mensaje de tu equipo", leida: false },
@@ -15,19 +15,19 @@ function Dashboard() {
     { id: 5, mensaje: "Completa tu perfil", leida: true }
   ];
 
-  // Array de actividad reciente
+  
   const actividadReciente = [
     { id: 1, accion: "Actualizaste tu perfil", fecha: "Hace 2 horas" },
     { id: 2, accion: "Completaste un ejercicio", fecha: "Ayer" },
     { id: 3, accion: "Subiste un nuevo proyecto", fecha: "Hace 3 días" }
   ];
 
-  // Calcular notificaciones no leídas
+  
   const notificacionesNoLeidas = notificaciones.filter(n => !n.leida).length;
 
   return (
     <>
-      {/* SECCIÓN 1 - INFORMACIÓN DEL USUARIO */}
+      
       <div style={{
         border: "1px solid #ccc",
         padding: "20px",
@@ -41,7 +41,7 @@ function Dashboard() {
         <p><strong>Rol:</strong> {usuario.rol}</p>
       </div>
 
-      {/* SECCIÓN 2 - NOTIFICACIONES */}
+      
       <div style={{
         border: "1px solid #ccc",
         padding: "20px",
